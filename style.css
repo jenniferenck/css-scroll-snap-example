@@ -1,12 +1,23 @@
+/* .animate {
+  transition: transform 0.3s ease-out;
+} */
+
 .slider {
-  width: 300px;
-  height: 500px;
-  overflow-x: scroll;
+  width: 50vw;
+  height: 100vh;
+  /* overflow-y: scroll; */
 }
 .slide {
-  float: left;
-  width: 300px;
-  height: 500px;
+  /* float: left; */
+  width: 100vw;
+  height: 100vh;
+  padding: 5em;
+  /* margin: 1em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /* scroll-snap-align: center; */
 }
 
 #slide-0 {
@@ -19,4 +30,21 @@
 
 #slide-2 {
   background-color: limegreen;
+}
+
+.ms-touch.slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  -ms-overflow-style: none;
+  /* Hides the scrollbar. */
+
+  -ms-scroll-chaining: none;
+  /* Prevents Metro from swiping to the next tab or app. */
+
+  -ms-scroll-snap-type: mandatory;
+  /* Forces a snap scroll behavior on your images. */
+
+  -ms-scroll-snap-points-x: snapInterval(0%, 100%);
+  /* Defines the y and x intervals to snap to when scrolling. */
 }
